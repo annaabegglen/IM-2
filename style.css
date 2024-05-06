@@ -1,0 +1,29 @@
+header {
+    width: 97%; 
+    display: flex; 
+    justify-content: space-between; /* Verteilt die Elemente im Header */
+    align-items:center; /* Zentriert die Elemente vertikal */
+    padding: 0 20px; /* Fügt einen Padding hinzu, um etwas Platz zu beiden Seiten zu schaffen */
+}
+
+.header-left {
+    display: flex; /* Flexbox für die linke Seite aktivieren */
+    flex-direction: column; /* Elemente vertikal anordnen */
+}
+
+h1, h2, h3 {
+    margin: 0; /* Standardmargen entfernen */
+    padding: 0; /* Standardpadding entfernen */
+}
+
+h1, h2 {
+    text-align: left; /* Texte linksbündig ausrichten */
+}
+
+h3 {
+    text-align: right; /* Text rechtsbündig ausrichten */
+}
+
+body {
+    background-color: #bec4ca; /* helles Grau als Hintergrundfarbe */
+}
