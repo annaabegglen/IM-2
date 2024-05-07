@@ -9,15 +9,30 @@
 <body>
     <header>
         <div class="header-left">
-            <h1>Daily Delay</h1>
-            <h2>Switzerland</h2>
+            <h1>Karma Choo-Choo</h1>
+            <h2>Erlebe mit Karma Choo-Choo deinen bahntastischen Zufall! Lass den Zufall entscheiden und finde aufregende, neue Zugverbindungen quer durch die Schweiz.</h2>
         </div>
-        <h3>Timeframe</h3>
+
     </header>
     <main>
-        <div id="delay-list"></div>
+        <label for="city-selector">Abfahrt:</label>
+        <select id="city-selector">
+            <option value="Bern">Bern</option>
+            <option value="Zürich">Zürich</option>
+            <option value="Basel">Basel</option>
+            <option value="Genf">Genf</option>
+            <option value="Lausanne">Lausanne</option>
+            <option value="Luzern">Luzern</option>
+            <option value="St. Gallen">St. Gallen</option>
+            <option value="Winterthur">Winterthur</option>
+            <option value="Lugano">Lugano</option>
+            <option value="Biel">Biel</option>
+        </select>
 
-        <div id="blob"></div>
+        <button id="generate-destination">Generieren</button>
+        <div id="random-destination"></div>
+        
+    
 
     </main>
     <footer>

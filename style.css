@@ -20,10 +20,29 @@ h1, h2 {
     text-align: left; /* Texte linksbündig ausrichten */
 }
 
-h3 {
-    text-align: right; /* Text rechtsbündig ausrichten */
-}
+
 
 body {
     background-color: #bec4ca; /* helles Grau als Hintergrundfarbe */
 }
+
+#city-selector, #generate-destination {
+    margin: 10px;
+    padding: 5px;
+}
+
+#random-destination {
+    margin-top: 20px;
+}
+
+#city-selector, #generate-destination, label {
+    margin: 10px;
+    padding: 5px;
+    vertical-align: middle; /* Elemente auf der gleichen Linie zentrieren */
+}
+
+#generate-destination {
+    position: relative; /* Erlaubt die Bewegung innerhalb des übergeordneten Elements */
+    transition: transform 0.5s ease-in-out; /* Weiche Animation */
+}
+
