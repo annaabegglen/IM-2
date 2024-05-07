@@ -1,29 +1,49 @@
 header {
     width: 97%; 
     display: flex; 
-    justify-content: space-between; /* Verteilt die Elemente im Header */
-    align-items:center; /* Zentriert die Elemente vertikal */
-    padding: 0 20px; /* Fügt einen Padding hinzu, um etwas Platz zu beiden Seiten zu schaffen */
+    justify-content: space-between; 
+    align-items:center; 
 }
 
 .header-left {
-    display: flex; /* Flexbox für die linke Seite aktivieren */
-    flex-direction: column; /* Elemente vertikal anordnen */
+    display: flex;
+    flex-direction: column;
 }
 
-h1, h2, h3 {
-    margin: 0; /* Standardmargen entfernen */
-    padding: 0; /* Standardpadding entfernen */
+
+h1 {
+    margin-left: 10px; 
+    margin-top: 40px; 
+    margin-bottom: 0px; 
+    text-align: left; 
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 800; 
+    font-size: 96px; 
+}
+h2 {
+    width: 60%;
+    margin-left: 10px; 
+    margin-bottom: 20px; 
+    text-align: left; 
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 600; 
+    font-size: 25px; 
 }
 
-h1, h2 {
-    text-align: left; /* Texte linksbündig ausrichten */
+h3 {
+    margin-left: 15px; 
+    margin-top: -18px; 
+    text-align: left; 
+    font-family: 'Raleway', sans-serif; 
+    font-weight: 800; 
+    font-size: 18px; 
+
 }
 
 
 
 body {
-    background-color: #bec4ca; /* helles Grau als Hintergrundfarbe */
+    background-color: #A2CC8F; 
 }
 
 #city-selector, #generate-destination {
@@ -38,11 +58,16 @@ body {
 #city-selector, #generate-destination, label {
     margin: 10px;
     padding: 5px;
-    vertical-align: middle; /* Elemente auf der gleichen Linie zentrieren */
+    vertical-align: middle; 
 }
 
 #generate-destination {
-    position: relative; /* Erlaubt die Bewegung innerhalb des übergeordneten Elements */
-    transition: transform 0.5s ease-in-out; /* Weiche Animation */
+    position: relative; 
+    transition: transform 0.5s ease-in-out; 
 }
 
+img {
+    height: 100px;
+    position: relative;
+    right: -70%;
+}
