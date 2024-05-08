@@ -1,13 +1,9 @@
-header {
-    width: 97%; 
+#header {
+    width: 50%; 
     display: flex; 
     justify-content: space-between; 
     align-items:center; 
-}
-
-.header-left {
-    display: flex;
-    flex-direction: column;
+    position:absolute;
 }
 
 
@@ -70,4 +66,23 @@ img {
     height: 100px;
     position: relative;
     right: -70%;
+}
+
+#train {
+    transition: transform 1s;
+}
+
+#svgContainer {
+    position: relative;
+    display: flex;               /* Aktiviert Flexbox für den Container */
+    justify-content: flex-end;   /* Richtet die Inhalte am rechten Rand aus */
+    align-items: flex-start;     /* Richtet die Inhalte am oberen Rand aus */
+    width: 100%;                 /* Setzt die Breite des Containers auf die volle Bildschirmbreite */
+    height: 400px;               /* Festgelegte Höhe, kann nach Bedarf angepasst werden */
+    margin-top: 0px;             /* Optional: Stellt sicher, dass der Container ganz oben ist */
+}
+
+#svgTrain {
+    width: 800px;                /* Setzt die Breite des SVG */
+    height: 400px;               /* Setzt die Höhe des SVG */
 }

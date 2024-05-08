@@ -69,12 +69,8 @@ document.getElementById('generate-destination').addEventListener('click', functi
     }, 500);
 });
 
-function moveButtonRandomly() {
-    const button = document.getElementById('generate-destination');
-    const maxX = window.innerWidth - button.clientWidth;
-    const maxY = window.innerHeight - button.clientHeight;
-    const randomX = Math.random() * maxX;
-    const randomY = Math.random() * maxY;
-    button.style.transform = `translate(${randomX}px, ${randomY}px)`;
-}
+
+
+
+
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daily Delay API</title>
+    <title>Karma Choo-Choo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -33,10 +33,29 @@
 
         <button id="generate-destination">Generieren</button>
         <div id="random-destination"></div>
-        
+        <div id="svgContainer">
+            <svg width="800" height="400" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
+              <path id="trainPath" fill="none" stroke="red" stroke-width="2" d="M723 16.4999 C691.5 31.4999 562.093 -87.5343 548 196 C533.086 496.078 380.5 339 218 366.5 C55.5004 394 32 380 0.5 380" />
+              <image href="pics/zug1.png" id="train" width="100px" height="50px" x="-50" y="-25">
+                  <animateMotion
+                      dur="10s"
+                      repeatCount="indefinite"
+                      fill="freeze"
+                      rotate="auto">
+                      <mpath xlink:href="#trainPath"/>
+                  </animateMotion>
+              </image>
+          </svg>
+      </div>
         <div>
             <img src="pics/cloud.png" alt="cloud">
           </div>
+
+
+        
+        
+        
+        
 
 
     </main>
