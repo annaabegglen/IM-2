@@ -1,11 +1,36 @@
+document.addEventListener("DOMContentLoaded", () => {
+    const path = document.getElementById('trainPath');
+    const dropdownGroup = document.getElementById('dropdownGroup');
+
+    // Function to position the dropdown
+    const positionDropdown = () => {
+        const pathLength = path.getTotalLength();
+        const point = path.getPointAtLength(pathLength * 0.5); // Adjust the multiplier as needed
+        dropdownGroup.setAttribute("transform", `translate(${point.x}, ${point.y})`);
+    };
+
+    // Initial positioning
+    positionDropdown();
+
+    // Reposition on window resize
+    window.addEventListener('resize', positionDropdown);
+});
+
 const cities = [
     "Bern", "Zürich", "Basel", "Genf", "Lausanne",
     "Luzern", "St. Gallen", "Winterthur", "Lugano", "Biel"
 ];
 
+document.addEventListener("DOMContentLoaded", () => {
+    const citySelector = document.getElementById('city-selector');
+    citySelector.addEventListener('change', () => {
+        citySelector.classList.add('selected');
+    });
+});
+
 async function fetchRandomDestination() {
-    const selectedCityIndex = document.getElementById('city-selector').selectedIndex;
-    const startCity = cities[selectedCityIndex];
+    const citySelector = document.getElementById('city-selector');
+    const startCity = citySelector.value;
 
     const stationboardUrl = `http://transport.opendata.ch/v1/stationboard?station=${startCity}&limit=5`;
     try {
