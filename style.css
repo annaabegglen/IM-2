@@ -1,71 +1,73 @@
-#header {
-    width: 50%; 
-    display: flex; 
-    justify-content: space-between; 
-    align-items:center; 
-    position:absolute;
+body {
+    background-color: #A2CC8F;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
+header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 
 h1 {
-    margin-left: 10px; 
-    margin-top: 40px; 
-    margin-bottom: 0px; 
-    text-align: left; 
-    font-family: 'Raleway', sans-serif; 
-    font-weight: 800; 
-    font-size: 96px; 
+    margin-left: 10px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 96px;
 }
+
 h2 {
     width: 60%;
-    margin-left: 10px; 
-    margin-bottom: 20px; 
-    text-align: left; 
-    font-family: 'Raleway', sans-serif; 
-    font-weight: 600; 
-    font-size: 25px; 
+    margin-left: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 25px;
 }
 
 h3 {
-    margin-left: 15px; 
-    margin-top: -18px; 
-    text-align: left; 
-    font-family: 'Raleway', sans-serif; 
-    font-weight: 800; 
-    font-size: 18px; 
-
+    margin-left: 15px;
+    margin-top: -18px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
 }
 
-
-
-body {
-    background-color: #A2CC8F; 
-}
-
-#city-selector, #generate-destination {
+.styled-element {
+    background-color: #F1F1C0;
+    border: 2px solid #A2CC8F;
+    border-radius: 8px;
+    padding: 10px;
     margin: 10px;
-    padding: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: left;
+    color: #333;
 }
 
 #random-destination {
-    margin-top: 20px;
-}
-
-#city-selector, #generate-destination, label {
-    margin: 10px;
-    padding: 5px;
-    vertical-align: middle; 
+    display: flex;
+    flex-direction: row;
+    background-color: #F1F1C0;
+    border-radius: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 #generate-destination {
-    position: relative; 
-    transition: transform 0.5s ease-in-out; 
-}
-
-img {
-    height: 100px;
     position: relative;
-    right: -70%;
+    transition: transform 0.5s ease-in-out;
 }
 
 #train {
@@ -73,16 +75,19 @@ img {
 }
 
 #svgContainer {
+    flex: 1;
     position: relative;
-    display: flex;               /* Aktiviert Flexbox für den Container */
-    justify-content: flex-end;   /* Richtet die Inhalte am rechten Rand aus */
-    align-items: flex-start;     /* Richtet die Inhalte am oberen Rand aus */
-    width: 100%;                 /* Setzt die Breite des Containers auf die volle Bildschirmbreite */
-    height: 400px;               /* Festgelegte Höhe, kann nach Bedarf angepasst werden */
-    margin-top: 0px;             /* Optional: Stellt sicher, dass der Container ganz oben ist */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 0px;
 }
 
-#svgTrain {
-    width: 800px;                /* Setzt die Breite des SVG */
-    height: 400px;               /* Setzt die Höhe des SVG */
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
 }

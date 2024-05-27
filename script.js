@@ -7,20 +7,16 @@ async function fetchRandomDestination() {
     const selectedCityIndex = document.getElementById('city-selector').selectedIndex;
     const startCity = cities[selectedCityIndex];
 
-    // Erste API-Abfrage: Abrufen der Abfahrten vom gewählten Startort
     const stationboardUrl = `http://transport.opendata.ch/v1/stationboard?station=${startCity}&limit=5`;
     try {
         const stationboardResponse = await fetch(stationboardUrl);
         const stationboardData = await stationboardResponse.json();
         if (stationboardData && stationboardData.stationboard.length > 0) {
-            // Extrahieren der möglichen Ziele aus den Zugfahrten
             const allDestinations = stationboardData.stationboard.map(train => train.to);
-            const uniqueDestinations = Array.from(new Set(allDestinations)); // Entfernt Duplikate
+            const uniqueDestinations = Array.from(new Set(allDestinations));
 
-            // Wähle ein zufälliges Ziel aus
             const randomDestination = uniqueDestinations[Math.floor(Math.random() * uniqueDestinations.length)];
 
-            // Zweite API-Abfrage: Details zur Verbindung zum gewählten Ziel
             const connectionsUrl = `http://transport.opendata.ch/v1/connections?from=${startCity}&to=${randomDestination}`;
             const connectionsResponse = await fetch(connectionsUrl);
             const connectionsData = await connectionsResponse.json();
@@ -46,7 +42,18 @@ async function fetchRandomDestination() {
 
 function displayRandomDestination(startCity, departureTime, destinationCity, arrivalTime, departurePlatform, arrivalPlatform) {
     const container = document.getElementById('random-destination');
-    container.textContent = `Abfahrtsort: ${startCity}, Abfahrtszeit: ${departureTime}, Gleis: ${departurePlatform}, Ankunftsort: ${destinationCity}, Ankunftszeit: ${arrivalTime}, Gleis: ${arrivalPlatform}.`;
+    container.innerHTML = `
+        <div class="destination-item">
+            <div>von: ${startCity}</div>
+            <div>Abfahrt: ${departureTime}</div>
+            <div>Gleis: ${departurePlatform}</div>
+        </div>
+        <div class="destination-item">
+            <div>nach: ${destinationCity}</div>
+            <div>Ankunft: ${arrivalTime}</div>
+            <div>Gleis: ${arrivalPlatform}</div>
+        </div>
+    `;
 }
 
 function displayRandomDestinationError() {
@@ -55,22 +62,3 @@ function displayRandomDestinationError() {
 }
 
 document.getElementById('generate-destination').addEventListener('click', fetchRandomDestination);
-
-document.getElementById('generate-destination').addEventListener('click', function() {
-    let count = 0;
-    const interval = setInterval(() => {
-        if (count >= 10) { // 10 Bewegungen, ca. 5 Sekunden bei 500ms je Bewegung
-            clearInterval(interval);
-            fetchRandomDestination(); // Funktion, die nach dem Stoppen der Animation aufgerufen wird
-        } else {
-            moveButtonRandomly();
-            count++;
-        }
-    }, 500);
-});
-
-
-
-
-
-

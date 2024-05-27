@@ -12,55 +12,62 @@
             <h1>Karma Choo-Choo</h1>
             <h3>Switzerland</h3>
             <h2>Erlebe mit Karma Choo-Choo deinen bahntastischen Zufall! Lass den Zufall entscheiden und finde aufregende, neue Zugverbindungen quer durch die Schweiz.</h2>
-
         </div>
-
     </header>
     <main>
-        <label for="city-selector">Abfahrt:</label>
-        <select id="city-selector">
-            <option value="Bern">Bern</option>
-            <option value="Zürich">Zürich</option>
-            <option value="Basel">Basel</option>
-            <option value="Genf">Genf</option>
-            <option value="Lausanne">Lausanne</option>
-            <option value="Luzern">Luzern</option>
-            <option value="St. Gallen">St. Gallen</option>
-            <option value="Winterthur">Winterthur</option>
-            <option value="Lugano">Lugano</option>
-            <option value="Biel">Biel</option>
-        </select>
-
-        <button id="generate-destination">Generieren</button>
-        <div id="random-destination"></div>
         <div id="svgContainer">
-            <svg width="800" height="400" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid meet">
-              <path id="trainPath" fill="none" stroke="red" stroke-width="2" d="M723 16.4999 C691.5 31.4999 562.093 -87.5343 548 196 C533.086 496.078 380.5 339 218 366.5 C55.5004 394 32 380 0.5 380" />
-              <image href="pics/zug1.png" id="train" width="100px" height="50px" x="-50" y="-25">
-                  <animateMotion
-                      dur="10s"
-                      repeatCount="indefinite"
-                      fill="freeze"
-                      rotate="auto">
-                      <mpath xlink:href="#trainPath"/>
-                  </animateMotion>
-              </image>
-          </svg>
-      </div>
-        <div>
-            <img src="pics/cloud.png" alt="cloud">
-          </div>
-
-
-        
-        
-        
-        
-
-
+            <svg width="100%" height="600" viewBox="0 0 1422 1050" preserveAspectRatio="xMidYMid meet">
+                <path id="trainPath" fill="none" stroke="red" stroke-width="2" d="M1421.1 23.8333C1367.1 3.66662 1257.8 -9.76672 1252.6 97.8333C1265.43 197.167 1245.02 403.155 1066.6 378.333C942 361 883 373 810.097 386.333C687.127 408.823 484.596 386.333 404.596 394.333C324.596 402.333 233.103 349.392 152.499 349.392C5.78372 349.392 -70.1597 717.413 140 738.893C234 748.5 232 700.5 392 657.5C552 614.5 585 621.2 640.097 617.333C754.097 609.333 998.096 663.333 1100.6 543.333C1203.1 423.333 1384 512.5 1392.1 708.833C1392.1 852.833 1369.6 1006.83 1142.1 952.333C914.596 897.833 924.097 868.333 722.097 886.333C560.497 900.733 386.43 904.333 319.596 904.333" />
+                <image href="pics/zug1.png" id="train1" width="100px" height="50px" x="-50" y="-25">
+                    <animateMotion
+                        dur="20s"
+                        repeatCount="indefinite"
+                        fill="freeze"
+                        rotate="auto">
+                        <mpath xlink:href="#trainPath"/>
+                    </animateMotion>
+                </image>
+                <image href="pics/zug1.png" id="train2" width="100px" height="50px" x="-50" y="-25">
+                    <animateMotion
+                        begin="0.2s"
+                        dur="20s"
+                        repeatCount="indefinite"
+                        fill="freeze"
+                        rotate="auto">
+                        <mpath xlink:href="#trainPath"/>
+                    </animateMotion>
+                </image>
+                <image href="pics/zug1.png" id="train3" width="100px" height="50px" x="-50" y="-25">
+                    <animateMotion
+                        begin="0.4s"
+                        dur="20s"
+                        repeatCount="indefinite"
+                        fill="freeze"
+                        rotate="auto">
+                        <mpath xlink:href="#trainPath"/>
+                    </animateMotion>
+                </image>
+            </svg>
+        </div>
+        <div class="button-container">
+            <label for="city-selector" class="styled-element">Abfahrt:</label>
+            <select id="city-selector" class="styled-element">
+                <option value="Bern">Bern</option>
+                <option value="Zürich">Zürich</option>
+                <option value="Basel">Basel</option>
+                <option value="Genf">Genf</option>
+                <option value="Lausanne">Lausanne</option>
+                <option value="Luzern">Luzern</option>
+                <option value="St. Gallen">St. Gallen</option>
+                <option value="Winterthur">Winterthur</option>
+                <option value="Lugano">Lugano</option>
+                <option value="Biel">Biel</option>
+            </select>
+            <button id="generate-destination" class="styled-element">Generieren</button>
+            <div id="random-destination" class="styled-element"></div>
+        </div>
     </main>
     <footer>
-
     </footer>
 <script src="script.js"></script>
 </body>
