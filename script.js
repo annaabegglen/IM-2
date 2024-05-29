@@ -1,8 +1,3 @@
-const cities = [
-    "Bern", "Zürich", "Basel", "Genf", "Lausanne",
-    "Luzern", "St. Gallen", "Winterthur", "Lugano", "Biel"
-];
-
 document.addEventListener("DOMContentLoaded", () => {
     const citySelector = document.getElementById('city-selector');
     citySelector.addEventListener('change', () => {
@@ -65,7 +60,11 @@ function displayRandomDestination(startCity, departureTime, destinationCity, arr
 
 function displayRandomDestinationError() {
     const container = document.getElementById('random-destination');
-    container.textContent = `Keine Verbindungsdaten verfügbar.`;
+    container.innerHTML = `
+        <div class="destination-item">
+            <div>Keine Verbindungsdaten verfügbar.</div>
+        </div>
+    `;
 }
 
 document.getElementById('generate-destination').addEventListener('click', fetchRandomDestination);

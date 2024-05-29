@@ -1,0 +1,101 @@
+body {
+    background-color: #A2CC8F;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.boxes-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #F1F1C0;
+    text-align: center;
+    margin: 10px; /* Add margin to create space between boxes when wrapping */
+}
+
+.box h2 {
+    font-size: calc(1.2em + 1vw); /* Responsive font size */
+    margin: 10px 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+.box p {
+    color: #000;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: calc(0.8em + 0.5vw); /* Responsive font size */
+}
+
+.styled-element {
+    background-color: #F1F1C0;
+    border: 2px solid #A2CC8F;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: calc(0.8em + 0.5vw); /* Responsive font size */
+    text-align: left;
+    color: #333;
+}
+
+/* Media Queries */
+
+/* Tablets in portrait and landscape */
+@media (max-width: 768px) {
+    .boxes-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 80%; /* Adjust box width for tablets */
+    }
+
+    .styled-element {
+        font-size: calc(0.9em + 1vw); /* Adjust font size for tablets */
+    }
+}
+
+/* Smartphones in portrait and landscape */
+@media (max-width: 480px) {
+    .box {
+        width: 90%; /* Adjust box width for smartphones */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .box h2 {
+        font-size: calc(1em + 2vw); /* Adjust font size for smartphones */
+    }
+
+    .box p {
+        font-size: calc(0.7em + 1vw); /* Adjust font size for smartphones */
+    }
+
+    .styled-element {
+        font-size: calc(0.8em + 1vw); /* Adjust font size for smartphones */
+    }
+}
