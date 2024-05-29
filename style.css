@@ -61,9 +61,11 @@ h3 {
     height: 100%;
 }
 
-#dropdownContainer {
-    position: absolute;
-
+#dropdown-container {
+    position: absolute; /* Absolute positioning relative to the parent */
+    top: 50%; /* Adjust the top position to align with the path */
+    left: 50%; /* Adjust the left position to align with the path */
+    transform: translate(-50%, -50%); /* Center the dropdown */
 }
 
 .styled-element {
@@ -71,6 +73,7 @@ h3 {
     border: 2px solid #A2CC8F;
     border-radius: 8px;
     padding: 10px;
+    margin: 10px;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     font-size: 16px;
@@ -113,4 +116,5 @@ h3 {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
+    padding: 20px;
 }

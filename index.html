@@ -46,29 +46,32 @@
                             <mpath xlink:href="#trainPath"/>
                         </animateMotion>
                     </image>
-                    <!-- Container for the Dropdown -->
-                    <g id="dropdownGroup">
-                        <foreignObject width="100" height="50">
-                            <body xmlns="http://www.w3.org/1999/xhtml">
-                                <div id="dropdownContainer">
-                                    <select id="city-selector" class="styled-element">
-                                        <option value="" disabled selected hidden>Abfahrtsort</option>
-                                        <option value="Bern">Bern</option>
-                                        <option value="Zürich">Zürich</option>
-                                        <option value="Basel">Basel</option>
-                                        <option value="Genf">Genf</option>
-                                        <option value="Lausanne">Lausanne</option>
-                                        <option value="Luzern">Luzern</option>
-                                        <option value="St. Gallen">St. Gallen</option>
-                                        <option value="Winterthur">Winterthur</option>
-                                        <option value="Lugano">Lugano</option>
-                                        <option value="Biel">Biel</option>
-                                    </select>
-                                </div>
-                            </body>
-                        </foreignObject>
-                    </g>
+                    <image href="pics/zug1.png" id="train1" width="100px" height="50px" x="-50" y="-25">
+                        <animateMotion
+                            dur="20s"
+                            repeatCount="indefinite"
+                            fill="freeze"
+                            rotate="auto">
+                            <mpath xlink:href="#trainPath"/>
+                        </animateMotion>
+                    </image>
                 </svg>
+                <!-- Container for the Dropdown -->
+                <div id="dropdown-container">
+                    <select id="city-selector" class="styled-element">
+                        <option value="" disabled selected hidden>Abfahrtsort</option>
+                        <option value="Bern">Bern</option>
+                        <option value="Zürich">Zürich</option>
+                        <option value="Basel">Basel</option>
+                        <option value="Genf">Genf</option>
+                        <option value="Lausanne">Lausanne</option>
+                        <option value="Luzern">Luzern</option>
+                        <option value="St. Gallen">St. Gallen</option>
+                        <option value="Winterthur">Winterthur</option>
+                        <option value="Lugano">Lugano</option>
+                        <option value="Biel">Biel</option>
+                    </select>
+                </div>
             </div>
         </div>
     </header>
