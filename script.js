@@ -9,7 +9,7 @@ async function fetchRandomDestination() {
     const citySelector = document.getElementById('city-selector');
     const startCity = citySelector.value;
 
-    const stationboardUrl = `http://transport.opendata.ch/v1/stationboard?station=${startCity}&limit=5`;
+    const stationboardUrl = `https://transport.opendata.ch/v1/stationboard?station=${startCity}&limit=5`;
     try {
         const stationboardResponse = await fetch(stationboardUrl);
         const stationboardData = await stationboardResponse.json();
@@ -19,7 +19,7 @@ async function fetchRandomDestination() {
 
             const randomDestination = uniqueDestinations[Math.floor(Math.random() * uniqueDestinations.length)];
 
-            const connectionsUrl = `http://transport.opendata.ch/v1/connections?from=${startCity}&to=${randomDestination}`;
+            const connectionsUrl = `https://transport.opendata.ch/v1/connections?from=${startCity}&to=${randomDestination}`;
             const connectionsResponse = await fetch(connectionsUrl);
             const connectionsData = await connectionsResponse.json();
             if (connectionsData && connectionsData.connections && connectionsData.connections.length > 0) {

@@ -1,72 +1,101 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+}
+
 body {
     background-color: #A2CC8F;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    font-size: 1vw; /* Base font size relative to viewport width */
+    font-size: calc(12px + 0.5vw); /* Responsive Basis-Schriftgröße */
 }
 
 header {
     position: relative;
     width: 100%;
-    height: 100vh; /* Ensures the header takes up the full height of the viewport */
+    height: 50vh;
+    /* Header-Höhe auf halbe Viewport-Höhe eingestellt */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     overflow: hidden;
+    padding-left: 1vw;
+    box-sizing: border-box;
 }
 
-h1, h2, h3 {
-    z-index: 2;
-    position: relative;
-    margin-left: 1vw;
-    text-align: left;
-    font-family: 'Raleway', sans-serif;
-}
+
 
 h1 {
-    margin-top: 4vw;
-    margin-bottom: 0;
+    margin-top: 0.8vw;
     font-weight: 800;
-    font-size: 8vw;
+    font-size: calc(24px + 4vw); /* Responsive Schriftgröße */
+    z-index: 2;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 0vw;
 }
 
 h2 {
-    width: 60%;
-    margin-bottom: 2vw;
+    width: 75%;
+    margin-bottom: 4vw; /* Vergrößerter Abstand zum nächsten Element */
     font-weight: 600;
-    font-size: 2.5vw;
+    font-size: calc(14px + 1vw); /* Responsive Schriftgröße */ z-index: 2;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 2vw;
 }
 
 h3 {
-    margin-top: -1.8vw;
     font-weight: 800;
-    font-size: 1.8vw;
+    font-size: calc(12px + 0.8vw); /* Responsive Schriftgröße */
+    z-index: 2;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 0.1vw;
 }
 
 #svgPaddingContainer {
-    position: center;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    padding-top: 5vw; /* Add your desired padding here */
-    box-sizing: border-box; /* Ensure padding is included in the total height */
+    height: 100vh;
+    /* Höhe des SVG-Containers auf die gesamte Viewport-Höhe gesetzt */
+    box-sizing: border-box;
     z-index: 1;
+    position: absolute;
+    /* Über Header und Main strecken */
+    top: 0;
+    left: 0; 
+    padding-top: 12vw;
 }
 
 #svgContainer {
-    position: center; /* Set the container to relative positioning */
+    position: relative;
     width: 100%;
     height: 100%;
 }
 
-#dropdown-container {
-    position: absolute; /* Absolute positioning relative to the parent */
-    top: 50%; /* Adjust the top position to align with the path */
-    left: 50%; /* Adjust the left position to align with the path */
-    transform: translate(-50%, -50%); /* Center the dropdown */
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    margin-top: 50vh;
+    /* Platz für das SVG-Element schaffen */
+}
+
+/* Neuer Container für die Dropdown-Liste, den Button und die Random-Destination-Anzeige */
+.controls-container {
+    position: absolute; /* Absolut positioniert */
+    top: 66%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Zentriert den Container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
 }
 
 .styled-element {
@@ -74,49 +103,50 @@ h3 {
     border: 0.2vw solid #A2CC8F;
     border-radius: 0.8vw;
     padding: 1vw;
-    margin: 1vw;
+    margin: 1vw 0;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: 1.6vw;
     text-align: left;
     color: #333;
 }
 
 #random-destination {
     display: flex;
-    flex-direction: column; /* Change to column for vertical alignment */
+    flex-direction: column;
     background-color: #F1F1C0;
-    border-radius: 0.7vw;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 600;
-    font-size: 2vw; /* Increase font size */
-    width: 30vw; /* Adjust width to make it narrower */
-    height: 15vw; /* Keep the height the same */
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 2vw auto; /* Center the element */
-    padding: 1vw; /* Add padding */
-}
-
-#random-destination .destination-item {
-    margin: 0.5vw 0; /* Add vertical margin between items */
-}
-
-#generate-destination {
-    font-size: 2vw; /* Match font size with #random-destination */
-    padding: 0.5vw 1vw; /* Adjust padding to make the button thinner */
-    background-color: #F1F1C0;
-    border: 0.2vw solid #A2CC8F;
     border-radius: 0.8vw;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
+    font-size: calc(12px + 0.8vw); /* Responsive Schriftgröße */
+    width: 20vw;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1vw;
+}
+
+#random-destination .destination-item {
+    margin: 0.5vw 0;
+}
+
+#generate-destination {
+    font-size: calc(12px + 0.8vw); /* Responsive Schriftgröße */
+    padding: 1vw;
+    background-color: #F1F1C0;
+    border: 0.2vw solid #A2CC8F;
+    border-radius: 1vw;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
     color: #333;
-    margin: 1vw auto; /* Center the button */
-    display: inline-block; /* Change to inline-block to shrink height */
-    height: auto; /* Ensure the height is adjusted by padding */
-    line-height: 1; /* Ensure the line height is normal */
+    margin-left: 25%;
+    display: inline-block;
+    height: auto;
+    line-height: 1;
     transition: transform 0.5s ease-in-out;
+    align-items: center;
+    text-align: center; /* Zentriert den Text innerhalb des Buttons */
+    margin-top: 6vw;
 }
 
 .train1 {
@@ -134,96 +164,47 @@ h3 {
     z-index: 1;
 }
 
-.button-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 #city-selector {
-    font-size: 2vw; /* Match font size with #generate-destination and #random-destination */
-    padding: 0.5vw 1vw; /* Adjust padding to align with button style */
+    font-size: calc(14px + 0.8vw); /* Responsive Schriftgröße */
+    padding: 0.5vw 1vw;
     background-color: #F1F1C0;
     border: 0.2vw solid #A2CC8F;
     border-radius: 0.8vw;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     color: #333;
-    margin: 1vw auto; /* Center the dropdown */
-    display: inline-block; /* Change to inline-block to shrink height */
-    height: auto; /* Ensure the height is adjusted by padding */
-    line-height: 1; /* Ensure the line height is normal */
+    margin: 1vw 0;
+    display: inline-block;
+    height: auto;
+    line-height: 1;
 }
 
-@media (min-width: 1024px) {
-    #svgContainer {
-        height: 70vh; /* Adjust height to ensure the entire SVG is visible */
-    }
+.footer-button-container {
+    display: flex;
+    justify-content: center;
+    padding: 2vw;
+    z-index: 3;
 }
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 10vw;
+        font-size: calc(16px + 4vw);
     }
-    
     h2 {
-        font-size: 4vw;
+        font-size: calc(12px + 2vw);
     }
-    
     h3 {
-        font-size: 3vw;
+        font-size: calc(10px + 1.5vw);
     }
-
     #random-destination {
-        width: 40vw;
-        height: 20vw;
-        font-size: 3vw;
+        width: 80%;
     }
-
-    #generate-destination {
-        font-size: 3vw;
+    .styled-element {
+        width: 90%;
     }
-
-    #city-selector {
-        font-size: 3vw;
-    }
-
-    #svgContainer {
-        height: 50vh; /* Adjust height for tablets */
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 12vw;
-    }
-    
-    h2 {
-        font-size: 5vw;
-    }
-    
-    h3 {
-        font-size: 4vw;
-    }
-
-    #random-destination {
-        width: 50vw;
-        height: 25vw;
-        font-size: 4vw;
-    }
-
-    #generate-destination {
-        font-size: 4vw;
-    }
-
-    #city-selector {
-        font-size: 4vw;
-    }
-
-    #svgContainer {
-        height: 40vh; /* Adjust height for mobile phones */
+    .controls-container {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
