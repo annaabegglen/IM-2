@@ -26,8 +26,6 @@ header {
     box-sizing: border-box;
 }
 
-
-
 h1 {
     margin-top: 0.8vw;
     font-weight: 800;
@@ -41,7 +39,8 @@ h1 {
 h2 {
     width: 60%;
     font-weight: 600;
-    font-size: calc(14px + 0.7vw); /* Responsive Schriftgröße */ z-index: 2;
+    font-size: calc(14px + 0.7vw); /* Responsive Schriftgröße */ 
+    z-index: 2;
     position: relative;
     font-family: 'Raleway', sans-serif;
 }
@@ -58,38 +57,35 @@ h3 {
 #svgPaddingContainer {
     width: 100%;
     height: 100%;
-    /* Höhe des SVG-Containers auf die gesamte Viewport-Höhe gesetzt */
     z-index: 1;
     position: absolute;
-    /* Über Header und Main strecken */
-    top: 0vw;
-    left: 0; 
+    top: 0;
+    left: 0;
 }
 
 #svgContainer {
     position: relative;
     width: 100%;
     height: 100%;
-
+    overflow: visible; /* Damit das SVG über den Container hinaus sichtbar bleibt */
+    z-index: -1; /* SVG-Hintergrund */
 }
 
 svg {
     width: 100%;
     height: 100%;
-    
 }
 
 main {
     margin-top: 50vh;
-    /* Platz für das SVG-Element schaffen */
+    z-index: 2; /* Über dem SVG */
 }
 
-/* Neuer Container für die Dropdown-Liste, den Button und die Random-Destination-Anzeige */
 .controls-container {
-    position: absolute; /* Absolut positioniert */
-    top: 63%;
+    position: absolute;
+    top: 75%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Zentriert den Container */
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,7 +97,7 @@ main {
     border: 0.2vw solid #A2CC8F;
     border-radius: 0.8vw;
     padding: 1vw;
-    font-size: calc(12px + 0.8vw); /* Responsive Schriftgröße */
+    font-size: calc(12px + 0.8vw);
     margin: 1vw 0;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
@@ -116,7 +112,7 @@ main {
     border-radius: 0.8vw;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: calc(12px + 0.8vw); /* Responsive Schriftgröße */
+    font-size: calc(12px + 0.8vw);
     width: 20vw;
     height: auto;
     justify-content: center;
@@ -125,7 +121,6 @@ main {
     padding: 1vw;
 }
 
-
 #generate-destination {
     display: flex;
     flex-direction: column;
@@ -133,14 +128,12 @@ main {
     border-radius: 0.8vw;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: calc(12px + 0.8vw); /* Responsive Schriftgröße */
+    font-size: calc(12px + 0.8vw);
     height: auto;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 1vw;
-    margin-left: 32%
-
 }
 
 .train1 {
@@ -159,7 +152,7 @@ main {
 }
 
 #city-selector {
-    font-size: calc(14px + 0.8vw); /* Responsive Schriftgröße */
+    font-size: calc(14px + 0.8vw);
     padding: 0.5vw 1vw;
     background-color: #F1F1C0;
     border: 0.2vw solid #A2CC8F;
@@ -167,51 +160,16 @@ main {
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
     color: #333;
-    margin: 1vw 0;
-    display: inline-block;
-    height: auto;
-    line-height: 1;
 }
 
 .footer-button-container {
     display: flex;
     justify-content: center;
-    padding: 2vw;
-    z-index: 3;
+    padding: 0vw;
+    z-index: 2;
 }
 
 @media (max-width: 768px) {
-
-        h1 {
-            font-size: calc(16px + 4vw);
-        }
-        h2 {
-            font-size: calc(7px + 0.7vw);
-        }
-        h3 {
-            font-size: calc(10px + 1.5vw);
-        }
-    
-        /*#svgPaddingContainer 
-            /* Keine Änderungen */
-        
-        
-        /*#svgContainer 
-            /* hier kommt es auf die neue Pfad grösse drauf an, ausprobieren */
-        
-        
-        /*svg 
-            /* hier kommt es auf die neue Pfad grösse drauf an, ausprobieren */
-        
-        
-        /*main 
-            /* hier kommt es auf die neue Pfad grösse drauf an, ausprobieren */
-    
-}
-
-  
-  /* Tablets (hochkant und quer) */
-  @media (min-width: 577px) and (max-width: 768px) {
     h1 {
         font-size: calc(16px + 4vw);
     }
@@ -221,21 +179,32 @@ main {
     h3 {
         font-size: calc(10px + 1.5vw);
     }
-   
-  }
-  
-  /* Tablets (quer) und kleine Desktops */
-  @media (min-width: 769px) and (max-width: 992px) {
+}
+
+/* Tablets (hochkant und quer) */
+@media (min-width: 577px) and (max-width: 768px) {
+    h1 {
+        font-size: calc(16px + 4vw);
+    }
+    h2 {
+        font-size: calc(7px + 0.7vw);
+    }
+    h3 {
+        font-size: calc(10px + 1.5vw);
+    }
+}
+
+/* Tablets (quer) und kleine Desktops */
+@media (min-width: 769px) and (max-width: 992px) {
     /* Deine Styles */
-  }
-  
-  /* Normale Desktops */
-  @media (min-width: 993px) and (max-width: 1200px) {
+}
+
+/* Normale Desktops */
+@media (min-width: 993px) and (max-width: 1200px) {
     /* Deine Styles */
-  }
-  
-  /* Große Desktops und Widescreens */
-  @media (min-width: 1201px) {
+}
+
+/* Große Desktops und Widescreens */
+@media (min-width: 1201px) {
     /* Deine Styles */
-  }
-  
+}
