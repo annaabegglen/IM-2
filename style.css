@@ -27,8 +27,8 @@ header {
 }
 
 h1 {
-    margin-top: 0.8vw;
-    font-weight: 800;
+    margin-top: 0.6vw;
+    font-weight: 980;
     font-size: calc(30px + 6vw); /* Responsive Schriftgröße */
     z-index: 2;
     position: relative;
@@ -37,7 +37,7 @@ h1 {
 }
 
 h2 {
-    width: 60%;
+    width: 70%;
     font-weight: 600;
     font-size: calc(14px + 0.7vw); /* Responsive Schriftgröße */ 
     z-index: 2;
@@ -46,7 +46,7 @@ h2 {
 }
 
 h3 {
-    font-weight: 800;
+    font-weight: 1000;
     font-size: calc(12px + 0.8vw); /* Responsive Schriftgröße */
     z-index: 2;
     position: relative;
@@ -68,22 +68,23 @@ h3 {
     width: 100%;
     height: 100%;
     overflow: visible; /* Damit das SVG über den Container hinaus sichtbar bleibt */
-    z-index: -1; /* SVG-Hintergrund */
+    z-index: 3; /* SVG-Hintergrund */
 }
 
 svg {
     width: 100%;
     height: 100%;
+    overflow: visible; /* Damit das SVG über den Container hinaus sichtbar bleibt */
 }
 
 main {
     margin-top: 50vh;
-    z-index: 2; /* Über dem SVG */
+    z-index: 8; /* Über dem SVG */
 }
 
 .controls-container {
     position: absolute;
-    top: 75%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -138,12 +139,12 @@ main {
 
 .train1 {
     transition: transform 1s;
-    z-index: 3;
+    z-index: 5;
 }
 
 .train2 {
     transition: transform 1s;
-    z-index: 2;
+    z-index: 0;
 }
 
 .train3 {
@@ -165,8 +166,10 @@ main {
 .footer-button-container {
     display: flex;
     justify-content: center;
-    padding: 0vw;
-    z-index: 2;
+    padding: 2vw;
+    z-index: 1;
+    padding-bottom: 2vw;
+
 }
 
 @media (max-width: 768px) {
