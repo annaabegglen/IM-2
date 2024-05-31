@@ -31,7 +31,7 @@ header {
 h1 {
     margin-top: 0.8vw;
     font-weight: 800;
-    font-size: calc(24px + 4vw); /* Responsive Schriftgröße */
+    font-size: calc(30px + 6vw); /* Responsive Schriftgröße */
     z-index: 2;
     position: relative;
     font-family: 'Raleway', sans-serif;
@@ -39,13 +39,11 @@ h1 {
 }
 
 h2 {
-    width: 75%;
-    margin-bottom: 4vw; /* Vergrößerter Abstand zum nächsten Element */
+    width: 60%;
     font-weight: 600;
-    font-size: calc(14px + 1vw); /* Responsive Schriftgröße */ z-index: 2;
+    font-size: calc(14px + 0.7vw); /* Responsive Schriftgröße */ z-index: 2;
     position: relative;
     font-family: 'Raleway', sans-serif;
-    margin-top: 2vw;
 }
 
 h3 {
@@ -59,13 +57,12 @@ h3 {
 
 #svgPaddingContainer {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     /* Höhe des SVG-Containers auf die gesamte Viewport-Höhe gesetzt */
-    box-sizing: border-box;
     z-index: 1;
     position: absolute;
     /* Über Header und Main strecken */
-    top: 2vw;
+    top: 0vw;
     left: 0; 
 }
 
@@ -90,7 +87,7 @@ main {
 /* Neuer Container für die Dropdown-Liste, den Button und die Random-Destination-Anzeige */
 .controls-container {
     position: absolute; /* Absolut positioniert */
-    top: 66%;
+    top: 63%;
     left: 50%;
     transform: translate(-50%, -50%); /* Zentriert den Container */
     display: flex;
@@ -104,10 +101,11 @@ main {
     border: 0.2vw solid #A2CC8F;
     border-radius: 0.8vw;
     padding: 1vw;
+    font-size: calc(12px + 0.8vw); /* Responsive Schriftgröße */
     margin: 1vw 0;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    text-align: left;
+    text-align: center;
     color: #333;
 }
 
@@ -127,27 +125,22 @@ main {
     padding: 1vw;
 }
 
-#random-destination .destination-item {
-    margin: 0.5vw 0;
-}
 
 #generate-destination {
-    font-size: calc(12px + 0.8vw); /* Responsive Schriftgröße */
-    padding: 1vw;
+    display: flex;
+    flex-direction: column;
     background-color: #F1F1C0;
-    border: 0.2vw solid #A2CC8F;
-    border-radius: 1vw;
+    border-radius: 0.8vw;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    color: #333;
-    margin-left: 25%;
-    display: inline-block;
+    font-size: calc(12px + 0.8vw); /* Responsive Schriftgröße */
     height: auto;
-    line-height: 1;
-    transition: transform 0.5s ease-in-out;
+    justify-content: center;
     align-items: center;
-    text-align: center; /* Zentriert den Text innerhalb des Buttons */
-    margin-top: 6vw;
+    text-align: center;
+    padding: 1vw;
+    margin-left: 32%
+
 }
 
 .train1 {
@@ -188,24 +181,61 @@ main {
 }
 
 @media (max-width: 768px) {
+
+        h1 {
+            font-size: calc(16px + 4vw);
+        }
+        h2 {
+            font-size: calc(7px + 0.7vw);
+        }
+        h3 {
+            font-size: calc(10px + 1.5vw);
+        }
+    
+        /*#svgPaddingContainer 
+            /* Keine Änderungen */
+        
+        
+        /*#svgContainer 
+            /* hier kommt es auf die neue Pfad grösse drauf an, ausprobieren */
+        
+        
+        /*svg 
+            /* hier kommt es auf die neue Pfad grösse drauf an, ausprobieren */
+        
+        
+        /*main 
+            /* hier kommt es auf die neue Pfad grösse drauf an, ausprobieren */
+    
+}
+
+  
+  /* Tablets (hochkant und quer) */
+  @media (min-width: 577px) and (max-width: 768px) {
     h1 {
         font-size: calc(16px + 4vw);
     }
     h2 {
-        font-size: calc(12px + 2vw);
+        font-size: calc(7px + 0.7vw);
     }
     h3 {
         font-size: calc(10px + 1.5vw);
     }
-    #random-destination {
-        width: 80%;
-    }
-    .styled-element {
-        width: 90%;
-    }
-    .controls-container {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
+   
+  }
+  
+  /* Tablets (quer) und kleine Desktops */
+  @media (min-width: 769px) and (max-width: 992px) {
+    /* Deine Styles */
+  }
+  
+  /* Normale Desktops */
+  @media (min-width: 993px) and (max-width: 1200px) {
+    /* Deine Styles */
+  }
+  
+  /* Große Desktops und Widescreens */
+  @media (min-width: 1201px) {
+    /* Deine Styles */
+  }
+  
