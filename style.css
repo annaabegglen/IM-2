@@ -35,29 +35,33 @@ h1 {
     margin-bottom: 0vw;
     line-height: 0.8;
     padding-left: 0vw;
+   
 }
 
 h2 {
     width: 70%;
-    font-weight: 596;
-    font-size: 1.3vw; 
+    font-weight: 599;
+    font-size: 1.5vw; 
     z-index: 2;
     position: relative;
     font-family: 'Raleway', sans-serif;
     line-height: 1.2;
     padding-top: 1vw;
     padding-left: 0.6vw;
+    
+    
 }
 
 h3 {
     font-weight: 1000;
-    font-size: 1.5vw;
+    font-size: 1.7vw;
     z-index: 2;
     position: relative;
     font-family: 'Raleway', sans-serif;
     margin-top: 0vw;
     line-height: 0.7;
     padding-left: 0.5vw;
+    
 }
 
 #svgPaddingContainer {
@@ -65,7 +69,7 @@ h3 {
     height: 100%;
     z-index: 1;
     position: absolute;
-    top: 0;
+    top: 2vw;
     left: 5vw;
 }
 
@@ -176,12 +180,8 @@ main {
 .footer-button-container {
     display: flex;
     justify-content: center;
-    padding: 2vw;
-    z-index: 1;
-    padding-bottom: 2vw;
+    margin-top: 13vw;
 }
-
-
 
 @media (max-width: 768px) {
     h1 {
@@ -230,7 +230,6 @@ main {
     }
     
 }
-
 
 /* Tablets (hochkant und quer) */
 @media (min-width: 577px) and (max-width: 768px) {
