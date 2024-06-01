@@ -26,23 +26,29 @@ header {
     box-sizing: border-box;
 }
 
+
 h1 {
-    margin-top: 0.6vw;
+    margin-top: 1.9vw;
     font-weight: 980;
     font-size: calc(30px + 6vw); /* Responsive Schriftgröße */
     z-index: 2;
     position: relative;
     font-family: 'Raleway', sans-serif;
     margin-bottom: 0vw;
+    line-height: 0.8;
+    padding-left: 0vw;
 }
 
 h2 {
     width: 70%;
-    font-weight: 600;
+    font-weight: 596;
     font-size: calc(14px + 0.7vw); /* Responsive Schriftgröße */ 
     z-index: 2;
     position: relative;
     font-family: 'Raleway', sans-serif;
+    line-height: 1.2;
+    padding-top: 1vw;
+    padding-left: 0.6vw;
 }
 
 h3 {
@@ -51,7 +57,9 @@ h3 {
     z-index: 2;
     position: relative;
     font-family: 'Raleway', sans-serif;
-    margin-top: 0.1vw;
+    margin-top: 0vw;
+    line-height: 0.7;
+    padding-left: 0.5vw;
 }
 
 #svgPaddingContainer {
