@@ -219,3 +219,11 @@ main {
 @media (min-width: 1201px) {
     /* Deine Styles */
 }
+/*<svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+<path id="trainPath" fill="none" stroke="#7F695D" stroke-width="2" d="
+    M 100, 150
+    m -75, 0
+    a 75,75 0 1,0 150,0
+    a 75,75 0 1,0 -150,0" />
+     
+    kreis für kleine bildschirme, ist eigentlich html code
