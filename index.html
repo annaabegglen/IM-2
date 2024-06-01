@@ -16,11 +16,12 @@
     </header>
     <div id="svgPaddingContainer">
         <div id="svgContainer">
-            <svg viewBox="0 0 1100 800" preserveAspectRatio="xMidYMid meet">
+            <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid meet">
                 <path id="trainPath" fill="none" stroke="#7F695D" stroke-width="9" 
                 d="M411.617 73.3559C436.936 53.3775 475.848 39.6298 507.444 35.0459C561 35.0459 571.508 40.7007 630 73.3559C695.17 109.739 774 35.0459 774 35.0459C825.5 -22.5 938.71 20.3559 965.5 73.3558C983.457 108.881 908.988 214.71 900.673 230.223C875.327 277.509 901.017 298.173 916.5 318C946.117 355.927 980.602 351.982 1017.95 381.535C1061.14 415.706 1080.12 463.191 1054.27 514.848C1029.84 563.699 980.468 594.299 933.409 618.81C854.143 660.095 764.844 644.767 695.388 592.703C673.517 576.309 642.768 548.642 613.471 551.304C570.124 555.242 543.348 573.801 511.926 602.435C478.761 632.658 449.849 663.875 403.889 672.722C355.194 682.095 299.947 670.504 255.821 648.932C225.069 633.898 199.808 619.439 181.014 589.923C166.774 567.558 177.248 530.256 172.359 504.961C160.996 446.172 101.026 437.992 63.8586 400.845C31.2407 368.244 -2.33985 316.139 10.9994 267.995C27.0931 209.91 86.2243 145.033 150.257 145.033C218.05 145.033 280.082 157.602 343.765 126.805C370.651 113.802 388.512 91.587 411.617 73.3559Z"/>
-                <image href="pics/zug1.png" id="train1" width="64px" height="32px" x="-32" y="-16">
+                <image href="pics/zug3.png" id="train3" width="64px" height="32px" x="-32" y="-16">
                     <animateMotion
+                        begin="0.8s"
                         dur="20s"
                         repeatCount="indefinite"
                         fill="freeze"
@@ -38,9 +39,8 @@
                         <mpath xlink:href="#trainPath"/>
                     </animateMotion>
                 </image>
-                <image href="pics/zug3.png" id="train3" width="64px" height="32px" x="-32" y="-16">
+                <image href="pics/zug1.png" id="train1" width="64px" height="32px" x="-32" y="-16">
                     <animateMotion
-                        begin="0.8s"
                         dur="20s"
                         repeatCount="indefinite"
                         fill="freeze"
@@ -69,8 +69,7 @@
                     <option value="Biel">Biel</option>
                 </select>
             </div>
-            <div class="button-container">
-                <button id="generate-destination" class="styled-element">Generieren</button>
+ 
                 <div id="random-destination" class="styled-element">
                     <div class="destination-item">
                         <div>von: </div>
@@ -83,6 +82,8 @@
                         <div>Gleis: </div>
                     </div>
                 </div>
+                <div class="button-container">
+                    <button id="generate-destination" class="styled-element">Generieren</button>
             </div>
         </div>
     </main>

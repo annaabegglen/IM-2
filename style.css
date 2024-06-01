@@ -1,7 +1,7 @@
 html, body {
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Verhindert horizontales Scrollen */
+    overflow-x: hidden;
 }
 
 body {
@@ -10,27 +10,25 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    font-size: calc(12px + 0.5vw); /* Responsive Basis-Schriftgröße */
 }
 
 header {
     position: relative;
     width: 100%;
     height: 50vh;
-    /* Header-Höhe auf halbe Viewport-Höhe eingestellt */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     overflow: hidden;
     padding-left: 1vw;
+    padding-top: 1vw;
     box-sizing: border-box;
 }
-
 
 h1 {
     margin-top: 1.9vw;
     font-weight: 980;
-    font-size: calc(30px + 6vw); /* Responsive Schriftgröße */
+    font-size: 8vw;
     z-index: 2;
     position: relative;
     font-family: 'Raleway', sans-serif;
@@ -42,7 +40,7 @@ h1 {
 h2 {
     width: 70%;
     font-weight: 596;
-    font-size: calc(14px + 0.7vw); /* Responsive Schriftgröße */ 
+    font-size: 1.3vw; 
     z-index: 2;
     position: relative;
     font-family: 'Raleway', sans-serif;
@@ -53,7 +51,7 @@ h2 {
 
 h3 {
     font-weight: 1000;
-    font-size: calc(12px + 0.8vw); /* Responsive Schriftgröße */
+    font-size: 1.5vw;
     z-index: 2;
     position: relative;
     font-family: 'Raleway', sans-serif;
@@ -68,7 +66,7 @@ h3 {
     z-index: 1;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 5vw;
 }
 
 #svgContainer {
@@ -77,11 +75,15 @@ h3 {
     height: 100%;
     overflow: visible; /* Damit das SVG über den Container hinaus sichtbar bleibt */
     z-index: 3; /* SVG-Hintergrund */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to top */
+    padding-top: 12vw; /* Add top padding */
 }
 
 svg {
     width: 100%;
-    height: 100%;
+    height: auto;
     overflow: visible; /* Damit das SVG über den Container hinaus sichtbar bleibt */
 }
 
@@ -92,9 +94,9 @@ main {
 
 .controls-container {
     position: absolute;
-    top: 70%;
+    top: 50%; /* Adjusted to be relative to the viewport width */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -177,53 +179,250 @@ main {
     padding: 2vw;
     z-index: 1;
     padding-bottom: 2vw;
-
 }
+
+
 
 @media (max-width: 768px) {
     h1 {
+        margin-top: 1.9vw;
         font-size: calc(16px + 4vw);
     }
     h2 {
         font-size: calc(7px + 0.7vw);
     }
     h3 {
-        font-size: calc(10px + 1.5vw);
+        font-size: 2.6vw;
     }
+    
+    #svgContainer {
+    height: 50vh;
+    }
+    
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .controls-container {
+        top: 23%; /* Adjusted to be relative to the viewport width */
+        left: 50%;
+    }
+    
+    #random-destination {
+        font-size: 2.4vw;
+        width: 25vw;
+    }
+    
+    #generate-destination {
+        font-size: 2.4vw;
+    }
+    
+    #city-selector {
+        font-size: 2.4vw;
+    }
+
+    .footer-button-container {
+        position: fixed; /* Fixiert den Footer-Container am unteren Rand */
+        bottom: 10%;
+        width: 100%; /* Stellt sicher, dass der Footer die gesamte Breite einnimmt */
+        padding-bottom: 1vw; /* Minimaler Abstand am unteren Rand */
+    }
+    
 }
+
 
 /* Tablets (hochkant und quer) */
 @media (min-width: 577px) and (max-width: 768px) {
     h1 {
+        margin-top: 2vw;
         font-size: calc(16px + 4vw);
     }
     h2 {
-        font-size: calc(7px + 0.7vw);
+        font-size: 2vw;
     }
     h3 {
-        font-size: calc(10px + 1.5vw);
+        font-size: 2.6vw;
     }
+
+    
+    #svgContainer {
+    height: 60vh;
+    }
+    
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .controls-container {
+        top: 23%; /* Adjusted to be relative to the viewport width */
+        left: 50%;
+    }
+    
+    #random-destination {
+        font-size: 2.4vw;
+        width: 25vw;
+    }
+    
+    #generate-destination {
+        font-size: 2.4vw;
+    }
+    
+    #city-selector {
+        font-size: 2.4vw;
+    }
+
+    .footer-button-container {
+        position: fixed; /* Fixiert den Footer-Container am unteren Rand */
+        bottom: 10%;
+        width: 100%; /* Stellt sicher, dass der Footer die gesamte Breite einnimmt */
+        padding-bottom: 1vw; /* Minimaler Abstand am unteren Rand */
+        align-items: center;
+        left: -5%;
+    }
+    
 }
 
 /* Tablets (quer) und kleine Desktops */
 @media (min-width: 769px) and (max-width: 992px) {
-    /* Deine Styles */
+    
+    h1 {
+        margin-top: 2vw;
+        font-size: 10vw;
+    }
+    h2 {
+        font-size: 2.3vw;
+    }
+    h3 {
+        font-size: 2.8vw;
+    }
+
+    
+    #svgContainer {
+    height: 60vh;
+    }
+    
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .controls-container {
+        top: 23%; /* Adjusted to be relative to the viewport width */
+        left: 50%;
+    }
+    
+    #random-destination {
+        font-size: 2.4vw;
+        width: 25vw;
+    }
+    
+    #generate-destination {
+        font-size: 2.4vw;
+    }
+    
+    #city-selector {
+        font-size: 2.4vw;
+    }
+
+    .footer-button-container {
+        position: fixed; /* Fixiert den Footer-Container am unteren Rand */
+        bottom: 10%;
+        width: 100%; /* Stellt sicher, dass der Footer die gesamte Breite einnimmt */
+        padding-bottom: 1vw; /* Minimaler Abstand am unteren Rand */
+        align-items: center;
+        left: -5%;
+    }
+    
 }
 
 /* Normale Desktops */
 @media (min-width: 993px) and (max-width: 1200px) {
-    /* Deine Styles */
+    #svgContainer {
+        padding-top: 13vw; /* Add top padding */
+    }
+
+    svg {
+        width: 100%;
+        height: 95%;
+    }
+
+    .train1, .train2, .train3 {
+        transform: scale(1); /* Originalgröße */
+    }
+
+    .styled-element {
+        font-size: calc(10px + 1vw); /* Proportional zur Bildschirmbreite */
+        padding: 0.8vw; /* Proportional zur Bildschirmbreite */
+        border-radius: 0.8vw; /* Proportional zur Bildschirmbreite */
+    }
+
+    .controls-container {
+        top: 50%; /* Adjusted to be relative to the viewport width */
+        left: 50%;
+    }
+
+    #random-destination {
+        font-size: calc(10px + 1vw); /* Proportional zur Bildschirmbreite */
+        width: 25vw; /* Proportional zur Bildschirmbreite */
+    }
+
+    #generate-destination {
+        font-size: calc(10px + 1vw); /* Proportional zur Bildschirmbreite */
+    }
+
+    #city-selector {
+        font-size: calc(10px + 1vw); /* Proportional zur Bildschirmbreite */
+        padding: 0.4vw 0.8vw; /* Proportional zur Bildschirmbreite */
+    }
+
+    .footer-button-container {
+        padding: 1vw; /* Proportional zur Bildschirmbreite */
+    }
 }
 
 /* Große Desktops und Widescreens */
 @media (min-width: 1201px) {
-    /* Deine Styles */
+    #svgContainer {
+        padding-top: 13vw; /* Add top padding */
+    }
+
+    svg {
+        width: 100%;
+        height: 95%;
+    }
+
+    .train1, .train2, .train3 {
+        transform: scale(1.1); /* Leicht vergrößert */
+    }
+
+    .styled-element {
+        font-size: calc(10px + 0.8vw); /* Proportional zur Bildschirmbreite */
+        padding: 0.6vw; /* Proportional zur Bildschirmbreite */
+        border-radius: 0.6vw; /* Proportional zur Bildschirmbreite */
+    }
+
+    .controls-container {
+        top: 25vw; /* Adjusted to be relative to the viewport width */
+        left: 50%;
+    }
+
+    #random-destination {
+        font-size: calc(10px + 0.8vw); /* Proportional zur Bildschirmbreite */
+        width: 20vw; /* Proportional zur Bildschirmbreite */
+    }
+
+    #generate-destination {
+        font-size: calc(10px + 0.8vw); /* Proportional zur Bildschirmbreite */
+    }
+
+    #city-selector {
+        font-size: calc(10px + 0.8vw); /* Proportional zur Bildschirmbreite */
+        padding: 0.3vw 0.6vw; /* Proportional zur Bildschirmbreite */
+    }
+
+    .footer-button-container {
+        padding: 0.8vw; /* Proportional zur Bildschirmbreite */
+    }
 }
-/*<svg viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
-<path id="trainPath" fill="none" stroke="#7F695D" stroke-width="2" d="
-    M 100, 150
-    m -75, 0
-    a 75,75 0 1,0 150,0
-    a 75,75 0 1,0 -150,0" />
-     
-    kreis für kleine bildschirme, ist eigentlich html code
