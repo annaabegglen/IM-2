@@ -60,6 +60,14 @@ body {
     font-size: calc(0.8em + 0.5vw); /* Responsive font size */
     text-align: left;
     color: #333;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.styled-element:active {
+    transform: scale(0.95); /* Leichtes Verkleinern */
+    background-color: #D3D3A0; /* Leichte Farbänderung */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.3); /* Innerer Schatten */
 }
 
 /* Media Queries */
@@ -75,6 +83,14 @@ body {
         width: 80%; /* Adjust box width for tablets */
     }
 
+    .box:nth-child(2) {
+        order: 3; /* Move Anna to the bottom */
+    }
+
+    .box:nth-child(3) {
+        order: 2; /* Move Simon to the middle */
+    }
+
     .styled-element {
         font-size: calc(0.9em + 1vw); /* Adjust font size for tablets */
     }
@@ -87,6 +103,14 @@ body {
         padding: 10px; /* Adjust padding for smaller screens */
     }
 
+    .box:nth-child(2) {
+        order: 3; /* Move Anna to the bottom */
+    }
+
+    .box:nth-child(3) {
+        order: 2; /* Move Simon to the middle */
+    }
+
     .box h2 {
         font-size: calc(1em + 2vw); /* Adjust font size for smartphones */
     }
@@ -97,5 +121,16 @@ body {
 
     .styled-element {
         font-size: calc(0.8em + 1vw); /* Adjust font size for smartphones */
+    }
+}
+
+/* Desktops */
+@media (min-width: 769px) {
+    .box:nth-child(2) {
+        order: 2; /* Move Anna to the middle */
+    }
+
+    .box:nth-child(3) {
+        order: 3; /* Move Simon to the bottom */
     }
 }
