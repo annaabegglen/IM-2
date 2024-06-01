@@ -1,9 +1,9 @@
-# Shock_gorls
+# Traders
 
 #### Team 
-- Hanna Zsakai
-- Silvana Waser
-- Luana Donghi 
+- Anna Abegglen
+- Mireille Beurret
+- Simon Huber
 
 ## Dokumentation
 
@@ -11,33 +11,26 @@
 #### Quellen und Methodik
 
 Methodik<br>
-Um uns die Materie anzueignen, waren uns die Cheatsheets aus dem Unterricht und Tutorials auf YT eine grosse Hilfe. 
-Mit dem angeeigneten Grundwissen setzten wir uns ans Projekt und das Programmieren konnte beginnen!
+Im Prozess haben wir grösstenteils einfach ausprobiert. Wir haben unsere Ideen mit ChatGPT überarbeitet und angepasst um auf Lösungen zu kommen. Es war also grösstenteils Learning by Doing. 
 
 Problemlösung<br>
-Auf dem Weg dieses Projektes stiessen wir auf viele Probleme. In solchen Fällen probierten wir das Problem vorerst selbst zu lösen. Hier waren ChatGPT und die Unterlagen aus dem Unterricht eine grosse Hilfe.
+Bei Problemen haben wir zuerst selbst überlegt, woran es liegen könnte. Wenn dies nicht klappte, haben wir bei ChatGPT oder im Internet nachgefragt. Auch die Coachings waren immer wieder hilfreich.
 
 
 #### Quellen
 
-Dieser Abschnitt listet die Hauptressourcen auf, die während des Projekts genutzt wurden. <br>
+Wir haben folgende Hilfsmittel im Prozess verwendet. <br>
 -Figma <br>
--W3Schools <br>
--ChatGPT  <br>
--codepen.io <br>
--YouTube <br>
+-ChatGPT <br>
+-W3Schools  <br>
 -Google <br>
--Learning by doing <br>
 
 
 #### Planung
-Da unsere drei Webseiten sich stark voneinander unterscheiden, mussten wir drei HTML-, drei CSS-Dateien und drei Javascript-Dateien erstellen. Diese teilten wir gerecht unter den drei Mitgliedern auf. So leistete jedes Teammitglied seinen Beitrag zu diesem Projekt. 
+Wir haben am ersten Tag an einer Idee rumstudiert, die wir dann aber über den Haufen werfen mussten. Schnell hatten wir dann aber eine Idee, die wir in Figma dargestellt haben. Anschliessend haben wir uns Überlegungen gemacht, wie das Design aussehen sollte.
 
 #### Umsetzung
-Anfangs setzten wir uns zu dritt zusammen und überleggten uns ein peppiges Design. Wir erstellten die Verbindung zu unserer API-Datenbank und legten voller Elan los. Wir nutzen GitHub um gemeinsam zu arbeiten und sicherzustellen, das jede Person an der aktuellsten Version arbeitet. 
-Teile des Codes machten wir parallel responsive, Teile am Schluss. Hier hatte jede:r aus dem Team sein:e eigenen Präferenzen.
-
+Als wir mit dem Figma zufrieden waren setzten wir uns ans Coden. Wir verbindeten unsere Seite mit der Bahn-API und setzten das Design um. Während dem Prozess haben wir immer wieder Anpassungen vorgenommen. Wir haben die Arbeit immer alle zusammen an einem grossen Bildschirm vorgenommen. Sodass wir alle über alle Schritte Bescheid wisssen und am meisten Learning aus der Arbeit ziehen. Wir haben jeweils für die Hauptseite und die Teamseite je ein HTML und CSS erstellt. Für die Hauptseite haben wir zusätzlich noch das JavaScript gemacht. 
 
 #### Herausforderungen
-Unsere grösste Herausforderung war das Burgermenü zu codieren. Dieses hat oft gesponnen und hat uns mehrmals in der Erarbeitung dieses Projektes Ärger bereitet. 
-Javascript stellte uns zudem vor einige Herausforderung, da wir uns das erste Mal damit auseinandersetzten. Hier war ChatGPT eine grosse Hilfe.
+Wir müssen rückblickend sagen, dass die Wahl für einen Pfad uns sehr viele Schwierigkeiten bereitet hat. Jegliche Anpassungen und vor allem die Responsiveness waren für uns aufgrund des Pfades sehr schwierig. Dafür haben wir sehr viel Zeit gebraucht und am Ende dann aus einem komplizierten Pfad einfach einen Kreis gemacht. Als Team haben wir uns gegenseitig unterstützt und in guter Kommunikation Lösungen gefunden, die für uns alle gepasst haben.
