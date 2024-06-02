@@ -7,6 +7,7 @@ body {
     align-items: center;
 }
 
+/* Container für das Bild, das die gesamte Breite einnimmt */
 .image-container {
     width: 100%;
 }
@@ -16,14 +17,16 @@ body {
     height: auto;
 }
 
+/* Container für die Boxen, die nebeneinander angeordnet sind */
 .boxes-container {
     display: flex;
     justify-content: space-around;
     width: 100%;
     margin-top: 20px;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: wrap; /* Erlaubt das Umbruch bei kleineren Bildschirmen */
 }
 
+/* Stil für jede einzelne Box */
 .box {
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -32,23 +35,26 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: #F1F1C0;
     text-align: center;
-    margin: 10px; /* Add margin to create space between boxes when wrapping */
+    margin: 10px; /* Abstand zwischen den Boxen */
 }
 
+/* Stil für die Überschrift in jeder Box */
 .box h2 {
-    font-size: calc(1.2em + 1vw); /* Responsive font size */
+    font-size: calc(1.2em + 1vw); /* Responsive Schriftgröße */
     margin: 10px 0;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
 }
 
+/* Stil für den Text in jeder Box */
 .box p {
     color: #000;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: calc(0.8em + 0.5vw); /* Responsive font size */
+    font-size: calc(0.8em + 0.5vw); /* Responsive Schriftgröße */
 }
 
+/* Stil für gestylte Elemente */
 .styled-element {
     background-color: #F1F1C0;
     border: 2px solid #A2CC8F;
@@ -57,22 +63,23 @@ body {
     margin: 10px;
     font-family: 'Raleway', sans-serif;
     font-weight: 600;
-    font-size: calc(0.8em + 0.5vw); /* Responsive font size */
+    font-size: calc(0.8em + 0.5vw); /* Responsive Schriftgröße */
     text-align: left;
     color: #333;
     transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
     cursor: pointer;
 }
 
+/* Stil für aktive gestylte Elemente */
 .styled-element:active {
     transform: scale(0.95); /* Leichtes Verkleinern */
     background-color: #D3D3A0; /* Leichte Farbänderung */
     box-shadow: inset 0 0 5px rgba(0,0,0,0.3); /* Innerer Schatten */
 }
 
-/* Media Queries */
+/* Media Queries für verschiedene Bildschirmgrößen */
 
-/* Tablets in portrait and landscape */
+/* Tablets im Hoch- und Querformat */
 @media (max-width: 768px) {
     .boxes-container {
         flex-direction: column;
@@ -80,57 +87,57 @@ body {
     }
 
     .box {
-        width: 80%; /* Adjust box width for tablets */
+        width: 80%; /* Anpassung der Box-Breite für Tablets */
     }
 
     .box:nth-child(2) {
-        order: 3; /* Move Anna to the bottom */
+        order: 3; /* Verschiebt die zweite Box nach unten */
     }
 
     .box:nth-child(3) {
-        order: 2; /* Move Simon to the middle */
+        order: 2; /* Verschiebt die dritte Box in die Mitte */
     }
 
     .styled-element {
-        font-size: calc(0.9em + 1vw); /* Adjust font size for tablets */
+        font-size: calc(0.9em + 1vw); /* Anpassung der Schriftgröße für Tablets */
     }
 }
 
-/* Smartphones in portrait and landscape */
+/* Smartphones im Hoch- und Querformat */
 @media (max-width: 480px) {
     .box {
-        width: 90%; /* Adjust box width for smartphones */
-        padding: 10px; /* Adjust padding for smaller screens */
+        width: 90%; /* Anpassung der Box-Breite für Smartphones */
+        padding: 10px; /* Anpassung des Paddings für kleinere Bildschirme */
     }
 
     .box:nth-child(2) {
-        order: 3; /* Move Anna to the bottom */
+        order: 3; /* Verschiebt die zweite Box nach unten */
     }
 
     .box:nth-child(3) {
-        order: 2; /* Move Simon to the middle */
+        order: 2; /* Verschiebt die dritte Box in die Mitte */
     }
 
     .box h2 {
-        font-size: calc(1em + 2vw); /* Adjust font size for smartphones */
+        font-size: calc(1em + 2vw); /* Anpassung der Schriftgröße für Smartphones */
     }
 
     .box p {
-        font-size: calc(0.7em + 1vw); /* Adjust font size for smartphones */
+        font-size: calc(0.7em + 1vw); /* Anpassung der Schriftgröße für Smartphones */
     }
 
     .styled-element {
-        font-size: calc(0.8em + 1vw); /* Adjust font size for smartphones */
+        font-size: calc(0.8em + 1vw); /* Anpassung der Schriftgröße für Smartphones */
     }
 }
 
 /* Desktops */
 @media (min-width: 769px) {
     .box:nth-child(2) {
-        order: 2; /* Move Anna to the middle */
+        order: 2; /* Verschiebt die zweite Box in die Mitte */
     }
 
     .box:nth-child(3) {
-        order: 3; /* Move Simon to the bottom */
+        order: 3; /* Verschiebt die dritte Box nach unten */
     }
 }

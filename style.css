@@ -1,9 +1,11 @@
+/* Entfernt die Standard-Margin und -Padding von HTML und Body und verhindert horizontales Scrollen */
 html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
 
+/* Setzt den Hintergrund, die Anordnung und die Mindesthöhe für den Body */
 body {
     background-color: #A2CC8F;
     display: flex;
@@ -12,6 +14,7 @@ body {
     margin: 0;
 }
 
+/* Stellt den Header-Bereich ein */
 header {
     position: relative;
     width: 100%;
@@ -25,6 +28,7 @@ header {
     box-sizing: border-box;
 }
 
+/* Stil für H1-Überschrift */
 h1 {
     margin-top: 1.9vw;
     font-weight: 980;
@@ -37,6 +41,7 @@ h1 {
     padding-left: 0vw;
 }
 
+/* Stil für H2-Überschrift */
 h2 {
     width: 70%;
     font-weight: 599;
@@ -49,6 +54,7 @@ h2 {
     padding-left: 0.6vw;
 }
 
+/* Stil für H3-Überschrift */
 h3 {
     font-weight: 1000;
     font-size: 1.7vw;
@@ -60,6 +66,7 @@ h3 {
     padding-left: 0.5vw;
 }
 
+/* Container für das SVG-Padding */
 #svgPaddingContainer {
     width: 100%;
     height: 100%;
@@ -69,6 +76,7 @@ h3 {
     left: 5vw;
 }
 
+/* Container für das SVG */
 #svgContainer {
     position: relative;
     width: 100%;
@@ -77,24 +85,27 @@ h3 {
     z-index: 3; /* SVG-Hintergrund */
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align to top */
-    padding-top: 12vw; /* Add top padding */
+    align-items: flex-start; /* Ausrichtung oben */
+    padding-top: 12vw; /* Oben Padding hinzufügen */
 }
 
+/* Stil für SVG */
 svg {
     width: 100%;
     height: auto;
     overflow: visible; /* Damit das SVG über den Container hinaus sichtbar bleibt */
 }
 
+/* Stil für den Hauptinhalt */
 main {
     margin-top: 50vh;
     z-index: 8; /* Über dem SVG */
 }
 
+/* Container für die Steuerelemente */
 .controls-container {
     position: absolute;
-    top: 50%; /* Adjusted to be relative to the viewport width */
+    top: 50%; /* Zentriert in der Mitte des Viewports */
     left: 50%;
     transform: translate(-50%, 0);
     display: flex;
@@ -103,6 +114,7 @@ main {
     z-index: 3;
 }
 
+/* Stil für die gestylten Elemente */
 .styled-element {
     background-color: #F1F1C0;
     border: 0.2vw solid #A2CC8F;
@@ -118,12 +130,14 @@ main {
     cursor: pointer;
 }
 
+/* Stil für aktive gestylte Elemente */
 .styled-element:active {
     transform: scale(0.95); /* Leichtes Verkleinern */
     background-color: #D3D3A0; /* Leichte Farbänderung */
     box-shadow: inset 0 0 5px rgba(0,0,0,0.3); /* Innerer Schatten */
 }
 
+/* Container für die zufällige Zielanzeige */
 #random-destination {
     display: flex;
     flex-direction: column;
@@ -140,6 +154,7 @@ main {
     padding: 1vw;
 }
 
+/* Stil für den Button zum Generieren einer zufälligen Zielanzeige */
 #generate-destination {
     display: flex;
     flex-direction: column;
@@ -155,6 +170,7 @@ main {
     padding: 1vw;
 }
 
+/* Stile für die Züge */
 .train1 {
     transition: transform 1s;
     z-index: 5;
@@ -170,6 +186,7 @@ main {
     z-index: 1;
 }
 
+/* Stil für den City-Selector */
 #city-selector {
     font-size: calc(14px + 0.8vw);
     padding: 0.5vw 1vw;
@@ -181,12 +198,16 @@ main {
     color: #333;
 }
 
+/* Container für die Footer-Buttons */
 .footer-button-container {
     display: flex;
     justify-content: center;
     margin-top: 13vw;
 }
 
+/* Medienabfragen für verschiedene Bildschirmgrößen */
+
+/* Kleine Bildschirme (Handys im Hochformat) */
 @media (max-width: 768px) {
     h1 {
         margin-top: 1.9vw;
@@ -200,7 +221,7 @@ main {
     }
     
     #svgContainer {
-    height: 50vh;
+        height: 50vh;
     }
     
     svg {
@@ -209,7 +230,7 @@ main {
     }
     
     .controls-container {
-        top: 23%; /* Adjusted to be relative to the viewport width */
+        top: 23%; /* Zentriert im oberen Drittel des Viewports */
         left: 50%;
     }
     
@@ -232,7 +253,6 @@ main {
         width: 100%; /* Stellt sicher, dass der Footer die gesamte Breite einnimmt */
         padding-bottom: 1vw; /* Minimaler Abstand am unteren Rand */
     }
-    
 }
 
 /* Tablets (hochkant und quer) */
@@ -248,9 +268,8 @@ main {
         font-size: 2.6vw;
     }
 
-    
     #svgContainer {
-    height: 60vh;
+        height: 60vh;
     }
     
     svg {
@@ -259,7 +278,7 @@ main {
     }
     
     .controls-container {
-        top: 23%; /* Adjusted to be relative to the viewport width */
+        top: 23%; /* Zentriert im oberen Drittel des Viewports */
         left: 50%;
     }
     
@@ -284,12 +303,10 @@ main {
         align-items: center;
         left: -5%;
     }
-    
 }
 
 /* Tablets (quer) und kleine Desktops */
 @media (min-width: 769px) and (max-width: 992px) {
-    
     h1 {
         margin-top: 2vw;
         font-size: 10vw;
@@ -301,9 +318,8 @@ main {
         font-size: 2.8vw;
     }
 
-    
     #svgContainer {
-    height: 60vh;
+        height: 60vh;
     }
     
     svg {
@@ -312,7 +328,7 @@ main {
     }
     
     .controls-container {
-        top: 23%; /* Adjusted to be relative to the viewport width */
+        top: 23%; /* Zentriert im oberen Drittel des Viewports */
         left: 50%;
     }
     
@@ -337,13 +353,12 @@ main {
         align-items: center;
         left: -5%;
     }
-    
 }
 
 /* Normale Desktops */
 @media (min-width: 993px) and (max-width: 1200px) {
     #svgContainer {
-        padding-top: 13vw; /* Add top padding */
+        padding-top: 13vw; /* Oben Padding hinzufügen */
     }
 
     svg {
@@ -362,7 +377,7 @@ main {
     }
 
     .controls-container {
-        top: 50%; /* Adjusted to be relative to the viewport width */
+        top: 50%; /* Zentriert in der Mitte des Viewports */
         left: 50%;
     }
 
@@ -388,7 +403,7 @@ main {
 /* Große Desktops und Widescreens */
 @media (min-width: 1201px) {
     #svgContainer {
-        padding-top: 13vw; /* Add top padding */
+        padding-top: 13vw; /* Oben Padding hinzufügen */
     }
 
     svg {
@@ -407,7 +422,7 @@ main {
     }
 
     .controls-container {
-        top: 25vw; /* Adjusted to be relative to the viewport width */
+        top: 25vw; /* Zentriert im oberen Viertel des Viewports */
         left: 50%;
     }
 
